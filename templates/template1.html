@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Carreon, familiares</title>
+</head>
+<body>
+    <h1>Se han aagregado una lista de familiares.</h1>
+    <br>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Parentesco</th>
+            <th>Edad</th>
+            <th>Fecha de nacimiento</th>
+        </tr>
+        {% for familiar in lista_familiares %}
+            <tr>
+                <td>{{ familiar.nombre }}</td>
+                <td>{{ familiar.apellido }}</td>
+                <td>{{ familiar.edad }}</td>
+                <td>{{ familiar.parentesco }}</td>
+                <td>{{ familiar.date_of_birdth }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid gray;
+    }
+</style>
